@@ -171,9 +171,12 @@ function removeLine(row){
         document.body.removeChild(container[c + "_" + row]);
     }
     //将所消除行的上方所有行下移一行
-    for(let r = row-1; r >= 0; r--){
+    for(let r = row; r > 0; r--){
         for(let j = 0; j < col; j++){
-            container[j + "_" + r-1] = container[j + "_" + r]
+            container[j + "_" + r] = container[j + "_" + (r-1)];
+            if(container[j + "_" + r]){
+                container[j + "_" + r].style.top = r * size + 5 + "px";
+            }
         }
     }
 
