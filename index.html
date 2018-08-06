@@ -2,42 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>变换div</title>
-    <style>
-        .activityModel{
-            margin: 1px;
-            width: 19px;
-            height: 19px;
-            background: red;
-            position: absolute;
-            z-index:999;
-        }
-        /*31行，20列*/
-        .container{
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%,-50%);
-            -moz-transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-            -o-transform: translate(-50%,-50%);
-            width: 400px;
-            height: 620px;
-            background: black;
-            position: absolute;
-        }
-        .stationaryModel{
-            margin: 1px;
-            width: 19px;
-            height: 19px;
-            background: grey;
-            position: absolute;
-            z-index:999;
-        }
-
-    </style>
+    <title>俄罗斯方块</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class="container"></div>
+<section class="desc">
+    <h3>说明书</h3>
+    <article>
+        <p>键盘↑变图形</p>
+        <p>键盘↓加速下降</p>
+        <p>键盘→向右移</p>
+        <p>键盘←向左移</p>
+        <p>键盘空格垂直下落</p>
+    </article>
+</section>
 <script src="index.js"></script>
 </body>
 </html>

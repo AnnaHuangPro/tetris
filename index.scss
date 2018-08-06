@@ -1,0 +1,40 @@
+ body,html{
+            height:100%; 
+            width:100%;
+            margin: 0;
+            padding: 0;
+}
+.activityModel{
+    margin: 1px;
+    width: 19px;
+    height: 19px;
+    background: red;
+    position: absolute;
+    z-index:999;
+}
+/*31行，20列*/
+.container{
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    width: 400px;
+    height: 620px;
+    background: black;
+    position: absolute;
+}
+.stationaryModel{
+    margin: 1px;
+    width: 19px;
+    height: 19px;
+    background: grey;
+    position: absolute;
+    z-index:999;
+}
+.desc{
+    display: inline-block;
+    margin-left: 12%;
+    margin-top: 10%;
+}

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>变换div</title>
     <style>
+        body,html{
+            height:100%; 
+            width:100%;
+            margin: 0;
+            padding: 0;
+        }
         .activityModel{
             margin: 1px;
             width: 19px;
@@ -33,10 +39,25 @@
             position: absolute;
             z-index:999;
         }
+        .desc{
+            display: inline-block;
+            margin-left: 12%;
+            margin-top: 10%;
+        }
     </style>
 </head>
 <body>
 <div class="container"></div>
+<section class="desc">
+    <h3>说明书</h3>
+    <article>
+        <p>键盘↑变图形</p>
+        <p>键盘↓加速下降</p>
+        <p>键盘→向右移</p>
+        <p>键盘←向左移</p>
+        <p>键盘空格垂直下落</p>
+    </article>
+</section>
 <script src="index.js"></script>
 </body>
 </html>
