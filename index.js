@@ -11,11 +11,12 @@ const SHAPES =[[0,2,1,2,2,2,2,1],
              [0,1,0,2,1,2,2,2],
              [0,2,1,2,1,1,2,1],
              [0,1,1,1,1,2,2,2]];
+			 /*每次随机生成的初始图形*/
 const row = 31;
 const col = 20;
 const size = 20;
 let shape = [];/*存的单个图形的坐标*/
-let shapeDiv = [];/*存单个图形的4个div*/
+let shapeDiv = [];/*存1个图形的4个div*/
 let container = {};
 let x = 8;
 let y = 0;
