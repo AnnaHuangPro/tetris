@@ -22,7 +22,7 @@
     -o-transform: translate(-50%,-50%);
     width: 400px;
     height: 620px;
-    background: aliceblue;
+    background: #e3eff9;
     position: absolute;
 }
 .stationaryModel{
@@ -37,4 +37,14 @@
     display: inline-block;
     margin-left: 12%;
     margin-top: 10%;
+}
+#remove{
+    p{
+        position: absolute;
+        right: 25%;
+        top: 93%;
+        span{
+            color: #b9124b;
+        }
+    }
 }

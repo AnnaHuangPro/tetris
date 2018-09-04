@@ -23,6 +23,9 @@ let y = 0;
 let isPause = false;
 let interval;
 let freeFallInterval;
+let removeCount = 0;
+
+document.getElementById("removeCount").textContent = removeCount
 // let change = false;
 // let keyT=keyB=keyL=keyR=false;//设置指定键初始值
 
@@ -183,6 +186,8 @@ function removeLine(row){
         document.body.removeChild(container[c + "_" + row]);
     }
 
+    removeCount++;
+    document.getElementById("removeCount").textContent = removeCount;
     //将所消除行的上方所有行下移一行
     for(let r = row; r > 0; r--){
         for(let j = 0; j < col; j++){
