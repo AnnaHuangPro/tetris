@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>俄罗斯方块</title>
+    <link rel="icon" href="./favicon.ico">
     <link href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div class="container"></div>
-<section class="desc">
+<!-- <div class="container"></div> -->
+<!-- <section class="desc">
     <h3>说明书</h3>
     <article>
         <p>键盘↑变图形</p>
@@ -16,12 +17,22 @@
         <p>键盘←向左移</p>
         <p>键盘空格垂直下落</p>
     </article>
-</section>
+</!-->
+
+<input id="col" placeholder="列数" value="10">
+<input id="row" placeholder="行数" value="20">
+<div>
+		简单模式: <input name="mode" checked="checked" type="radio" value="easy" />
+		
+    进阶模式: <input name="mode" type="radio" value="difficult" />
+</div>
+<button type="number" onclick="config()" >开始</button>
+
 <div id="remove">
-    <p >你已经消除了
-        <span id="removeCount">0</span>
-        行
-    </p>
+	<p >你已经消除了
+			<span id="removeCount">0</span>
+			行
+	</p>
 </div>
 <script src="index.js"></script>
 </body>
