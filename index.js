@@ -22,12 +22,12 @@ const SHAPES = [
 let ROW = 20; // 限制框的行数为20行
 let COL = 20; // 限制列的行数为15行
 const SIZE = 20; // 每次移动的单位为20px,一个格子的宽高
-const RIGHT_INIT_INDEX = 1;
+let RIGHT_INIT_INDEX = 1;
 const DOWN_INIT_INDEX = 0;
 let randomShape = []; /*存的单个图形的坐标*/
 let currentShapeDiv = []; /*当前流动的 存1个图形的4个div*/
 let container = {}; /*存已经在下方已经固定的图形的div 坐标*/
-let rightMovedCount = RIGHT_INIT_INDEX;
+let rightMovedCount;
 let downMovedCount = DOWN_INIT_INDEX;
 let isPause = false; // 是否暂停
 let downImmediatelyInterval = null;
@@ -37,7 +37,7 @@ let isMoveOtherLines = true;
 
 document.getElementById("removeCount").textContent = removeCount;
 
-let containerWrap;
+let containerWrap = document.getElementById('container');
 
 // let change = false;
 // let keyT=keyB=keyL=keyR=false;//设置指定键初始值
@@ -140,7 +140,6 @@ function downImmediately() {
 function renderContainer () {
 	containerWrap.style.width = COL * SIZE + 'px';
 	containerWrap.style.height = ROW * SIZE + 'px';
-	containerWrap.style.backgroundColor = '#e3eff9';
 }
 function start() {
   rightMovedCount = RIGHT_INIT_INDEX;
@@ -165,10 +164,6 @@ function start() {
   freeFall();
 }
 
-function init () {
-	container = {};
-}
-
 function config() {
 	if(containerWrap) {
 		document.body.removeChild(containerWrap);
@@ -188,8 +183,10 @@ function config() {
 	containerWrap.id = "container";
 	document.body.append(containerWrap);
 	COL = Number(document.getElementById('col').value);
-	ROW = Number(document.getElementById('row').value);
-	renderContainer();
+  ROW = Number(document.getElementById('row').value);
+  RIGHT_INIT_INDEX = Math.floor(COL/2) - 1;
+  rightMovedCount = RIGHT_INIT_INDEX;
+  renderContainer();
 	start();
 }
 
@@ -217,6 +214,7 @@ function show() {
 
 function selectRandomShape() {
 	// 在7个图形中随机选择其中一个图片 /*可对一个数进行下舍入，向下取整计算 random:[0,1)*/
+
   return SHAPES[Math.floor(Math.random() * 10)];
 }
 

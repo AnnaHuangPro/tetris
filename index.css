@@ -15,6 +15,10 @@ html {
 }
 #container {
   position: relative;
+  margin: auto;
+  width: 200px;
+  height: 400px;
+  background-color: #e3eff9;
 }
 .stationaryModel {
   margin: 1px;
@@ -25,14 +29,13 @@ html {
   z-index: 999;
 }
 .desc {
-  display: inline-block;
-  margin-left: 12%;
-  margin-top: 10%;
+  position: absolute;
+  top: 200px;
+  left: 200px;
 }
 #remove p {
   position: absolute;
   right: 25%;
-  top: 93%;
 }
 #remove p span {
   color: #b9124b;
