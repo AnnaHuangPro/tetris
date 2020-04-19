@@ -3,7 +3,8 @@ html {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  overflow: hidden;
 }
 .activityModel {
   margin: 1px;
@@ -35,7 +36,8 @@ html {
 }
 #remove p {
   position: absolute;
-  right: 25%;
+  right: 10px;
+  bottom: 10px;
 }
 #remove p span {
   color: #b9124b;

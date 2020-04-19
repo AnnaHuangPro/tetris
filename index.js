@@ -184,7 +184,7 @@ function config() {
 	document.body.append(containerWrap);
 	COL = Number(document.getElementById('col').value);
   ROW = Number(document.getElementById('row').value);
-  RIGHT_INIT_INDEX = Math.floor(COL/2) - 1;
+  RIGHT_INIT_INDEX = Math.floor(COL/2) - 2;
   rightMovedCount = RIGHT_INIT_INDEX;
   renderContainer();
 	start();
